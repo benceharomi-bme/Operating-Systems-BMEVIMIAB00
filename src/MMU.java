@@ -20,9 +20,6 @@ public class MMU {
             for (Frame frame : frames) {
                 if (frame.page == numbers.getFirst()) {
                     output += "-";
-                    Frame tempFrame = frame;
-                    frames.remove(frame);
-                    frames.add(tempFrame);
                     numbers.removeFirst();
                     if (frame.used == 1) {
                         frame.used = 2;
