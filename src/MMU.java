@@ -44,12 +44,12 @@ public class MMU {
                 }
                 if (!hasFree) {
                     boolean releaseable = false;
+                    LinkedList<Frame> temp = new LinkedList<Frame>();
                     for (Frame frame : frames) {
                         if (frame.used == 2) {
                             frame.used = 1;
-
-                        }
-                        else if (frame.used == 1) {
+                            temp.add(frame);
+                        } else if (frame.used == 1) {
                             output += frame.name;
                             numOfErrors++;
                             frame.page = numbers.getFirst();
@@ -60,6 +60,10 @@ public class MMU {
                             releaseable = true;
                             break;
                         }
+                    }
+                    for (Frame frame : temp) {
+                        frames.remove(frame);
+                        frames.add(frame);
                     }
                     if (!releaseable) {
                         output += "*";
