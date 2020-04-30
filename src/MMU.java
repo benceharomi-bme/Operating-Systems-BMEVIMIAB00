@@ -24,7 +24,11 @@ public class MMU {
                     frames.remove(frame);
                     frames.add(tempFrame);
                     numbers.removeFirst();
-                    frame.used++;
+                    if (frame.used == 1) {
+                        frame.used = 2;
+                    } else if (frame.used == 2) {
+                        frame.used = 1;
+                    }
                     contains = true;
                     break;
                 }
@@ -37,7 +41,10 @@ public class MMU {
                         numOfErrors++;
                         frame.page = numbers.getFirst();
                         numbers.removeFirst();
-                        frame.used++;
+                        frame.used = 1;
+                        Frame tempFrame = frame;
+                        frames.remove(frame);
+                        frames.add(tempFrame);
                         hasFree = true;
                         break;
                     }
@@ -50,6 +57,9 @@ public class MMU {
                             numOfErrors++;
                             frame.page = numbers.getFirst();
                             numbers.removeFirst();
+                            Frame tempFrame = frame;
+                            frames.remove(frame);
+                            frames.add(tempFrame);
                             releaseable = true;
                             break;
                         }
