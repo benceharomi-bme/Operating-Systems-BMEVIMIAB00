@@ -21,11 +21,7 @@ public class MMU {
                 if (frame.page == numbers.getFirst()) {
                     output += "-";
                     numbers.removeFirst();
-                    if (frame.used == 1) {
-                        frame.used = 2;
-                    } else if (frame.used == 2) {
-                        frame.used = 1;
-                    }
+                    frame.used = 2;
                     contains = true;
                     break;
                 }
@@ -49,7 +45,11 @@ public class MMU {
                 if (!hasFree) {
                     boolean releaseable = false;
                     for (Frame frame : frames) {
-                        if (frame.used == 1) {
+                        if (frame.used == 2) {
+                            frame.used = 1;
+
+                        }
+                        else if (frame.used == 1) {
                             output += frame.name;
                             numOfErrors++;
                             frame.page = numbers.getFirst();
