@@ -1,5 +1,5 @@
-# second chance page changing algorithm
-The second optional Operating Systems Homework during my second year of Computer Engineering BSc at BME (2020)
+# Second Chance page replacement algorithm
+Implementation of the Second Chance page replacement algorithm in Java
 ## Fakultatív feladat: lapcsere megvalósítása
 Becsült programozási idő: ~5 óra
 
