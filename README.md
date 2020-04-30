@@ -1,5 +1,6 @@
 # second chance page changing algorithm
-Fakultatív feladat: lapcsere megvalósítása
+The second optional Homework of the Operating Systems subject at Budapest University of Technology in 2020
+## Fakultatív feladat: lapcsere megvalósítása
 Becsült programozási idő: ~5 óra
 
 A feladatbeküldés általános és FONTOS tudnivalói elolvashatók itt.
