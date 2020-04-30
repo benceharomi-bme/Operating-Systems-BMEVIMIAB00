@@ -54,9 +54,7 @@ public class MMU {
                             numOfErrors++;
                             frame.page = numbers.getFirst();
                             numbers.removeFirst();
-                            Frame tempFrame = frame;
-                            frames.remove(frame);
-                            frames.add(tempFrame);
+                            temp.add(frame);
                             releaseable = true;
                             break;
                         }
