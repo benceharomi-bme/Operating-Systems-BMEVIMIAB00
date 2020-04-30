@@ -14,8 +14,9 @@ A lapokat számok (1-99), a kereteket betűk (A,B,C és D) jelölik.
 
 Bemenet (standard input, stdin)
 Egyetlen sorban a lapokra történő hivatkozások egymástól vesszővel elválasztva. Például:
-
+```
 1,2,3,4,1,5,1
+```
 A bemenet végét EOF jelzi (előtte soremelés, üres sor lehet). Ekkor kell a kimenetre kiírni az eredményt.
 
 Kimenet (standard output, stdout)
@@ -28,6 +29,7 @@ Megvalósítandó algoritmus
 
 A program írja ki az algoritmus szerinti memóriafoglalásokat és a laphibák számát!
 Pl. a fenti bemenetre adott válasz:
-
+```
 ABCD-B-
 5
+```
